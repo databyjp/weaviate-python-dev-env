@@ -1,6 +1,8 @@
-### Weaviate Python Dev Environment
+## Weaviate Python Dev Environment
 
 This repository contains a development environment for Python projects, including a Docker-based Weaviate instance.
+
+### Setup
 
 First, copy this repository to your local machine:
 
@@ -47,4 +49,18 @@ You should see an output, like:
 ```shell
 Weaviate is ready to use
 Weaviate running with version: 1.29.0
+```
+
+Then, you are good to go!
+
+### Connecting to Weaviate
+
+Note that in this environment, the Weaviate instance has the hostname `weaviate`, not `localhost`. This is because the Weaviate instance is running in a Docker-based network.
+
+So, in your Python code - connect to it like this:
+
+```python
+client = weaviate.connect_to_local(
+    host="weaviate",
+)
 ```
