@@ -3,5 +3,23 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/workspaces/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.debugpy",
+        "ms-python.vscode-pylance"
+      ],
+      "settings": {
+        "python.formatting.provider": "black",
+        "python.formatting.blackPath": "/usr/local/bin/black",
+        "editor.formatOnSave": true,
+        "python.analysis.typeCheckingMode": "basic",
+        "python.languageServer": "Pylance",
+        "python.analysis.autoImportCompletions": true
+      }
+    }
+  },
   "postCreateCommand": "pip install --no-cache-dir -r requirements.txt"
 }
