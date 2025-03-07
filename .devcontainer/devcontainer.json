@@ -1,6 +1,7 @@
 {
   "name": "Python + Weaviate Development",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "weaviate",
-  "workspaceFolder": "/workspaces/app"
+  "service": "app",
+  "workspaceFolder": "/workspaces/app",
+  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt"
 }
