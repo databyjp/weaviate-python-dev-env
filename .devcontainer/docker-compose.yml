@@ -30,7 +30,7 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - ..:/workspaces/app:cached
+      - ..:/workspaces/weaviatedev:cached
     command: sleep infinity
     networks:
       - dev-network

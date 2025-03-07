@@ -1,7 +1,7 @@
 {
   "name": "Python + Weaviate Development",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspaces/app",
-  "postCreateCommand": "echo 'Welcome to the Python + Weaviate dev environment!' > /workspaces/app/WELCOME.txt"
+  "service": "weaviatedev",
+  "workspaceFolder": "/workspaces/weaviatedev",
+  "postCreateCommand": "echo 'Welcome to the Python + Weaviate dev environment!'"
 }
