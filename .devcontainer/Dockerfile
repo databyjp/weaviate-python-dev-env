@@ -9,7 +9,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Set up Python environment
-WORKDIR /workspaces/weaviatedev
+RUN mkdir -p /workspaces/app
+WORKDIR /workspaces/app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Only try to copy requirements if it exists in your build context
+COPY requirements.txt* ./
+RUN if [ -f "requirements.txt" ]; then pip install --no-cache-dir -r requirements.txt; fi
+
