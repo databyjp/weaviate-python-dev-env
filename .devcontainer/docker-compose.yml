@@ -26,9 +26,7 @@ services:
       - dev-network
 
   app:
-    build:
-      context: ..
-      dockerfile: .devcontainer/Dockerfile
+    image: jphwangdata/weaviate-python-dev-env:latest
     volumes:
       - ..:/workspaces/app:cached
     command: sleep infinity
